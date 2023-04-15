@@ -1,0 +1,37 @@
+h1 {
+  padding: 0;
+  margin-left: 1.5rem;
+  cursor: default;
+}
+
+td ul {
+  list-style: none;
+
+  li {
+
+    span {
+      display: inline-block;
+      line-height: 20px;
+    }
+  }
+}
+
+.talk {
+  background: #ffffff;
+  color: #495057;
+  //box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  //border-radius: 3px;
+  //padding: 1rem;
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: #6c757d;
+  }
+}

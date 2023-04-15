@@ -1,0 +1,227 @@
+<div class="min-h-screen flex flex-column surface-ground">
+  <div
+    class="surface-overlay py-3 px-6 flex align-items-center justify-content-between relative lg:static structure-header">
+    <img src="assets/images/logo.png" alt="Image" height="60" class="mr-0 lg:mr-6">
+    <a pRipple class="cursor-pointer block lg:hidden text-700" pStyleClass="@next" enterClass="hidden"
+       leaveToClass="hidden" [hideOnOutsideClick]="true">
+      <i class="pi pi-bars text-4xl"></i>
+    </a>
+    <div
+      class="align-items-center flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full surface-overlay left-0 top-100 shadow-2 lg:shadow-none"
+      style="z-index: 1000;">
+      <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row">
+        <!--
+        <li>
+          <a pRipple
+             class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+             [routerLink]="'/main'">
+            <i class="pi pi-home mr-2"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        -->
+        <!--
+        <li class="lg:relative">
+          <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+             pStyleClass="@next" enterClass="hidden" enterActiveClass="scalein" leaveToClass="hidden" leaveActiveClass="fadeout" [hideOnOutsideClick]="true">
+            <i class="pi pi-users mr-2"></i>
+            <span>Customers</span>
+            <i class="pi pi-angle-down ml-auto lg:ml-3"></i>
+          </a>
+          <ul class="list-none py-3 px-6 m-0 lg:px-0 lg:py-0 border-round shadow-0 lg:shadow-2 lg:border-1 border-50 lg:absolute surface-overlay hidden origin-top w-full lg:w-15rem cursor-pointer">
+            <li>
+              <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                <i class="pi pi-user-plus mr-2"></i>
+                <span class="font-medium">Add New</span>
+              </a>
+            </li>
+            <li class="relative">
+              <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150"
+                 pStyleClass="@next" enterClass="hidden" enterActiveClass="scalein" leaveToClass="hidden" leaveActiveClass="fadeout" [hideOnOutsideClick]="true">
+                <i class="pi pi-search mr-2"></i>
+                <span class="font-medium">Search</span>
+                <i class="pi pi-angle-down ml-auto lg:-rotate-90"></i>
+              </a>
+              <ul class="list-none py-3 pl-3 m-0 lg:px-0 lg:py-0 border-round shadow-0 lg:shadow-2 lg:border-1 border-50 lg:absolute surface-overlay hidden origin-top w-full lg:w-15rem cursor-pointer left-100 top-0">
+                <li>
+                  <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                    <i class="pi pi-shopping-cart mr-2"></i>
+                    <span class="font-medium">Purchases</span>
+                  </a>
+                </li>
+                <li class="relative">
+                  <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                    <i class="pi pi-comments mr-2"></i>
+                    <span class="font-medium">Messages</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        -->
+        <!--
+        <li class="lg:relative">
+          <a pRipple
+             class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+             pStyleClass="@next" enterClass="hidden" enterActiveClass="scalein" leaveToClass="hidden"
+             leaveActiveClass="fadeout" [hideOnOutsideClick]="true">
+            <i class="fal fa-cabinet-filing mr-2"></i>
+            <span>Cadastros</span>
+            <i class="pi pi-angle-down ml-auto lg:ml-3"></i>
+          </a>
+          <ul
+            class="list-none py-3 px-6 m-0 lg:px-0 lg:py-0 border-round shadow-0 lg:shadow-2 lg:border-1 border-50 lg:absolute surface-overlay hidden origin-top w-full lg:w-15rem cursor-pointer"
+            style="z-index: 1000;">
+            <li>
+              <a pRipple
+                 class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150"
+                 [routerLink]="'/records/editions'">
+                <i class="fal fa-star mr-2"></i>
+                <span class="font-medium">Edições</span>
+              </a>
+            </li>
+            <li>
+              <a pRipple
+                 class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150"
+                 [routerLink]="'/records/participants'">
+                <i class="fal fa-users-class mr-2"></i>
+                <span class="font-medium">Participantes</span>
+              </a>
+            </li>
+            <li>
+              <a pRipple
+                 class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150"
+                 [routerLink]="'/records/speakers'">
+                <i class="fal fa-chalkboard-teacher mr-2"></i>
+                <span class="font-medium">Palestrantes</span>
+              </a>
+            </li>
+            <li>
+              <a pRipple
+                 class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150"
+                 [routerLink]="'/records/collaborators'">
+                <i class="fal fa-hands-helping mr-2"></i>
+                <span class="font-medium">Colaboradores</span>
+              </a>
+            </li>
+            <li>
+              <a pRipple
+                 class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150"
+                 [routerLink]="'/records/users'">
+                <i class="fal fa-users-cog mr-2"></i>
+                <span class="font-medium">Usuários</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        -->
+        <li>
+          <a pRipple
+             class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+             [routerLink]="'/talks'">
+            <i class="fa-solid fa-comment mr-2"></i>
+            <span>Palestras</span>
+          </a>
+        </li>
+        <li>
+          <a pRipple
+             class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+             [routerLink]="'/confirmation-list'">
+            <i class="fa-solid fa-user-check mr-2"></i>
+            <span>Presença</span>
+          </a>
+        </li>
+        <!--
+        <li>
+          <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+            <i class="pi pi-chart-line mr-2"></i>
+            <span>Stats</span>
+          </a>
+        </li>
+        -->
+        <!--
+        <li>
+          <a pRipple
+             class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+             [routerLink]="['/login']">
+            <i class="fal fa-power-off mr-2"></i>
+            <span>Sair</span>
+          </a>
+        </li>
+        -->
+      </ul>
+      <ul
+        class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row border-top-1 surface-border lg:border-top-none">
+        <!--
+        <li>
+          <div class="field grid">
+            <label class="col-fixed flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 font-medium"
+                   style="margin-bottom:0">Edição</label>
+            <div class="col">
+              <p-dropdown [options]="editions" [(ngModel)]="selectedEdition" placeholder="Selecione a edição"
+                          optionLabel="name" styleClass="full-width"></p-dropdown>
+            </div>
+          </div>
+        </li>
+        -->
+        <!--
+        <li>
+          <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+            <i class="pi pi-inbox text-base lg:text-2xl mr-2 lg:mr-0"></i>
+            <span class="block lg:hidden font-medium">Inbox</span>
+          </a>
+        </li>
+        <li>
+          <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+            <i class="pi pi-bell text-base lg:text-2xl mr-2 lg:mr-0" pBadge severity="danger"></i>
+            <span class="block lg:hidden font-medium">Notifications</span>
+          </a>
+        </li>
+        <li class="border-top-1 surface-border lg:border-top-none">
+          <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center hover:surface-100 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+            <img src="assets/images/blocks/avatars/circle/avatar-f-1.png" class="mr-3 lg:mr-0" style="width: 32px; height: 32px"/>
+            <div class="block lg:hidden">
+              <div class="text-900 font-medium">Josephine Lillard</div>
+              <span class="text-600 font-medium text-sm">Marketing Specialist</span>
+            </div>
+          </a>
+        </li>
+        -->
+      </ul>
+    </div>
+  </div>
+  <!--
+  <ul class="list-none py-3 px-5 m-0 surface-section flex align-items-center font-medium overflow-x-auto border-top-1 border-bottom-1 surface-border">
+    <li class="pr-3">
+      <a class="cursor-pointer">
+        <i class="pi pi-home text-blue-500"></i>
+      </a>
+    </li>
+    <li class="px-2">
+      <i class="pi pi-angle-right text-500"></i>
+    </li>
+    <li class="px-2">
+      <a class="cursor-pointer text-blue-500 white-space-nowrap">Level 3</a>
+    </li>
+    <li class="px-2">
+      <i class="pi pi-angle-right text-500"></i>
+    </li>
+    <li class="px-2">
+      <a class="cursor-pointer text-blue-500 white-space-nowrap">Level 2</a>
+    </li>
+    <li class="px-2">
+      <i class="pi pi-angle-right text-500"></i>
+    </li>
+    <li class="px-2">
+      <a class="cursor-pointer text-900 white-space-nowrap">Level 1</a>
+    </li>
+  </ul>
+  -->
+  <div class="p-5 flex flex-column flex-auto">
+    <!-- border-2 border-dashed surface-border border-round -->
+    <div class="surface-section flex-auto structure-content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

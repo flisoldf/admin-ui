@@ -1,0 +1,210 @@
+
+<div class="min-h-screen flex flex-column">
+  <div class="bg-indigo-500" style="height:250px">
+    <div class="py-3 px-5 flex align-items-center justify-content-between relative lg:static" style="min-height: 80px">
+      <!-- <img src="assets/images/logo-300.svg" alt="Image" height="40" class="mr-0 lg:mr-6"> -->
+      <a pRipple class="cursor-pointer block lg:hidden text-indigo-50" pStyleClass="@next" enterClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
+        <i class="pi pi-bars text-4xl"></i>
+      </a>
+      <div class="align-items-center flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full bg-indigo-500 left-0 top-100 z-1">
+        <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row">
+          <li>
+            <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-indigo-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="fal fa-home mr-2"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-indigo-600 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+               pStyleClass="@next" enterClass="hidden" enterActiveClass="scalein" leaveToClass="hidden" leaveActiveClass="fadeout" [hideOnOutsideClick]="true">
+              <i class="fal fa-cabinet-filing mr-2"></i>
+              <span>Records</span>
+              <i class="fal fa-angle-down ml-auto lg:ml-3"></i>
+            </a>
+            <ul class="list-none py-3 px-6 m-0 lg:px-0 lg:py-0 border-round shadow-0 lg:border-1 border-50 lg:shadow-2 lg:absolute surface-overlay hidden origin-top w-full lg:w-15rem cursor-pointer">
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-music mr-2"></i>
+                  <span class="font-medium">Audios</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-waveform-path mr-2"></i>
+                  <span class="font-medium">Frequencies</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-tshirt mr-2"></i>
+                  <span class="font-medium">Products</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-calendar-day mr-2"></i>
+                  <span class="font-medium">Events</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-users mr-2"></i>
+                  <span class="font-medium">Customers</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-users-cog mr-2"></i>
+                  <span class="font-medium">Administrators</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-indigo-600 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+               pStyleClass="@next" enterClass="hidden" enterActiveClass="scalein" leaveToClass="hidden" leaveActiveClass="fadeout" [hideOnOutsideClick]="true">
+              <i class="fal fa-file-alt mr-2"></i>
+              <span>Content</span>
+              <i class="fal fa-angle-down ml-auto lg:ml-3"></i>
+            </a>
+            <ul class="list-none py-3 px-6 m-0 lg:px-0 lg:py-0 border-round shadow-0 lg:border-1 border-50 lg:shadow-2 lg:absolute surface-overlay hidden origin-top w-full lg:w-15rem cursor-pointer">
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-child mr-2"></i>
+                  <span class="font-medium">WeTuneIn</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-question mr-2"></i>
+                  <span class="font-medium">Questions & Answers</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-newspaper mr-2"></i>
+                  <span class="font-medium">Articles</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-video mr-2"></i>
+                  <span class="font-medium">Vídeos</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-sticky-note mr-2"></i>
+                  <span class="font-medium">Posts</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-exclamation mr-2"></i>
+                  <span class="font-medium">Notifications</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-stars mr-2"></i>
+                  <span class="font-medium">Reviews</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-indigo-600 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+               pStyleClass="@next" enterClass="hidden" enterActiveClass="scalein" leaveToClass="hidden" leaveActiveClass="fadeout" [hideOnOutsideClick]="true">
+              <i class="fal fa-tools mr-2"></i>
+              <span>Tools</span>
+              <i class="fal fa-angle-down ml-auto lg:ml-3"></i>
+            </a>
+            <ul class="list-none py-3 px-6 m-0 lg:px-0 lg:py-0 border-round shadow-0 lg:border-1 border-50 lg:shadow-2 lg:absolute surface-overlay hidden origin-top w-full lg:w-15rem cursor-pointer">
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-address-card mr-2"></i>
+                  <span class="font-medium">Export users</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="fal fa-envelope mr-2"></i>
+                  <span class="font-medium">Try email</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="hidden md:inline-flex">
+            <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-indigo-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="fal fa-power-off mr-2"></i>
+              <span>Quit</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row border-top-1 border-indigo-400 lg:border-top-none">
+          <li>
+            <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-indigo-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="fal fa-inbox text-base lg:text-2xl mr-2 lg:mr-0"></i>
+              <span class="block lg:hidden font-medium">Inbox</span>
+            </a>
+          </li>
+          <li>
+            <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-indigo-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="fal fa-bell text-base lg:text-2xl mr-2 lg:mr-0"></i>
+              <!-- <i class="fal fa-bell-on text-base lg:text-2xl mr-2 lg:mr-0 faa-ring animated"></i> -->
+              <span class="block lg:hidden font-medium">Notifications</span>
+              <!-- <span class="badge">4</span> -->
+            </a>
+          </li>
+          <li class="border-top-1 border-indigo-400 lg:border-top-none">
+            <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center hover:bg-indigo-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <img src="assets/images/blank-avatar.svg" class="mr-3 lg:mr-0" style="width: 32px; height: 32px"/>
+              <div class="block lg:hidden">
+                <div class="text-indigo-50 font-medium">Josephine Lillard</div>
+                <span class="text-indigo-100 font-medium text-sm">Marketing Specialist</span>
+              </div>
+            </a>
+          </li>
+          <li class="border-top-1 border-indigo-400 lg:border-top-none lg:hidden">
+            <a pRipple class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-indigo-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="pi pi-power-off mr-2"></i>
+              <span>Quit</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <ul class="list-none py-3 px-5 m-0 flex align-items-center font-medium overflow-x-auto border-top-1 border-indigo-600">
+      <li class="pr-3">
+        <a class="cursor-pointer">
+          <i class="fal fa-home text-indigo-200"></i>
+        </a>
+      </li>
+      <li class="px-2">
+        <i class="fal fa-angle-right text-indigo-200"></i>
+      </li>
+      <li class="px-2">
+        <a class="cursor-pointer text-indigo-200 white-space-nowrap">Level 3</a>
+      </li>
+      <li class="px-2">
+        <i class="fal fa-angle-right text-indigo-200"></i>
+      </li>
+      <li class="px-2">
+        <a class="cursor-pointer text-indigo-200 white-space-nowrap">Level 2</a>
+      </li>
+      <li class="px-2">
+        <i class="fal fa-angle-right text-indigo-200"></i>
+      </li>
+      <li class="px-2">
+        <a class="cursor-pointer text-indigo-100 white-space-nowrap">Level 1</a>
+      </li>
+    </ul>
+  </div>
+  <!--
+  <div class="p-5 flex flex-column flex-auto" style="margin-top: -8rem">
+    <div class="border-2 border-dashed surface-border border-round surface-section flex-auto">
+    </div>
+  </div>
+  -->
+  <ng-content></ng-content>
+</div>

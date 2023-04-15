@@ -1,0 +1,77 @@
+<p-progressBar *ngIf="loading" mode="indeterminate"></p-progressBar>
+<div class="flex full-height" style="padding:0">
+  <div class="surface-section w-full md:w-6 p-6 md:p-8">
+    <div class="mb-5 text-center">
+      <img src="assets/images/logo.png" alt="Image" height="100" class="mb-3">
+      <div class="text-900 text-3xl font-medium mb-3">Administração</div>
+      <!--
+      <span class="text-600 font-medium mr-2">Don't have an account?</span>
+      <a class="font-medium no-underline text-blue-500 cursor-pointer">Create today!</a>
+      -->
+    </div>
+    <div>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="field">
+          <label for="username" class="block text-900 font-medium mb-2"
+                 [class.p-error]="isInvalid('username')">Email</label>
+          <input id="username" type="text" pInputText class="w-full mb-3 p-3" [class.ng-invalid]="isInvalid('username')"
+                 [class.ng-dirty]="isInvalid('username')" formControlName="username">
+          <ng-container *ngFor="let validation of validationMessages.username">
+            <small
+              *ngIf="form.get('username')!.hasError(validation.type) && (form.get('username')!.dirty || form.get('username')!.touched)"
+              class="p-error block">{{validation.message}}</small>
+          </ng-container>
+        </div>
+
+        <div class="field">
+          <label for="password" class="block text-900 font-medium mb-2"
+                 [class.p-error]="isInvalid('password')">Senha</label>
+          <input id="password" type="password" pInputText class="w-full mb-3 p-3"
+                 [class.ng-invalid]="isInvalid('password')" [class.ng-dirty]="isInvalid('password')"
+                 formControlName="password">
+          <ng-container *ngFor="let validation of validationMessages.password">
+            <small
+              *ngIf="form.get('password')!.hasError(validation.type) && (form.get('password')!.dirty || form.get('password')!.touched)"
+              class="p-error block">{{validation.message}}</small>
+          </ng-container>
+        </div>
+
+        <div class="flex align-items-center justify-content-between mb-6">
+          <!--
+          <div class="flex align-items-center">
+            <p-checkbox id="rememberme" [binary]="true" styleClass="mr-2"></p-checkbox>
+            <label for="rememberme">Remember me</label>
+          </div>
+          -->
+          <div>
+            <ngx-recaptcha2
+              [siteKey]="siteKey"
+              [size]="size"
+              [hl]="lang"
+              [theme]="theme"
+              [type]="type"
+              [useGlobalDomain]="useGlobalDomain"
+              (reset)="handleReset()"
+              (expire)="handleExpire()"
+              (load)="handleLoad()"
+              (success)="handleSuccess($event)"
+              formControlName="recaptcha">
+            </ngx-recaptcha2>
+            <ng-container *ngFor="let validation of validationMessages.recaptcha">
+              <small *ngIf="form.get('recaptcha')!.hasError(validation.type) && captchaTouched"
+                     class="p-error block">{{validation.message}}</small>
+            </ng-container>
+          </div>
+
+          <!-- <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">Forgot password?</a> -->
+        </div>
+
+        <button type="submit" pButton pRipple label="Entrar" icon="fal fa-user" class="w-full p-3"
+                [loading]="loading"></button>
+      </form>
+    </div>
+  </div>
+  <div class="hidden md:block w-6 bg-no-repeat bg-cover"
+       style="background-image: url('assets/images/login.jpg')"></div>
+</div>
+<p-blockUI [blocked]="loading"></p-blockUI>

@@ -1,0 +1,58 @@
+<app-structure>
+  <h1 style="display: flex;justify-content: space-between;">
+    <span>Palestras</span>
+    <span style="margin-right: 1.5rem;">
+      <!-- <button pButton pRipple type="button" icon="fal fa-redo" class="p-button-rounded p-button-text" pTooltip="Atualizar" tooltipPosition="left"></button> -->
+      <!--
+      <button pButton pRipple type="button" icon="fa-solid fa-file-download" class="p-button-rounded"
+              pTooltip="Baixar documento"
+              tooltipPosition="left"></button>
+      -->
+      <!-- <button pButton pRipple type="button" icon="fal fa-redo" class="p-button-rounded p-button-outlined" pTooltip="Atualizar" tooltipPosition="left"></button> -->
+    </span>
+  </h1>
+
+  <div style="margin:0 1.5rem">Total: {{ talks.length }}</div>
+
+  <ng-container *ngFor="let talk of talks; index as i;">
+    <div class="talk shadow-2 m-4 p-4">
+      <sup>Ref: #{{talk.id}}</sup>
+      <div class="title">{{talk.title}}</div>
+      <div class="subtitle">{{talk.subject}}</div>
+      <p class="text-justify">{{talk.description}}</p>
+      <ul>
+        <li>Tipo: {{talk.kind.name}}</li>
+        <li>Turno: {{talk.shift.name}}</li>
+      </ul>
+      <p-table [value]="talk.speakers" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Palestrante</th>
+            <th>Ação</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-speaker>
+          <tr>
+            <td>
+              <div class="flex py-0">
+                <div class="mr-2">
+                  <p-avatar image="{{speaker.photoUrl}}" size="xlarge" [pTooltip]="speaker.name"></p-avatar>
+                </div>
+                <div style="line-height:64px;">{{speaker.name}}</div>
+              </div>
+            </td>
+            <td>
+              <p-button label="Baixar" styleClass="p-button-link" (click)="downloadPhoto(speaker)"></p-button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+      <ng-container *ngIf="talk.internalNote">
+        <br/>
+        <span><strong>Nota Interna</strong></span>
+        <p class="text-justify">{{talk.internalNote}}</p>
+      </ng-container>
+    </div>
+  </ng-container>
+
+</app-structure>

@@ -1,0 +1,17 @@
+ErrorDocument 404 /
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /
+
+    # Allow any request for CSS, JS and images straight through...
+    RewriteRule .\.(css|js|jpe?g|png|gif|svg) - [L]
+
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} -s [OR]
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^.*$ - [NC,L]
+
+    RewriteRule ^(.*) /index.html [NC,L]
+</IfModule>
