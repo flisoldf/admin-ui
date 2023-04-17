@@ -94,7 +94,7 @@ export class ConfirmationListComponent implements OnInit {
                 name: d.name,
                 email: d.email,
                 phone: d.phone,
-                confirmed: d.presented_at != null,
+                confirmed: d.presentedAt != null,
               }));
             break;
 
@@ -106,7 +106,7 @@ export class ConfirmationListComponent implements OnInit {
                 name: d.name,
                 email: d.email,
                 phone: d.phone,
-                confirmed: d.presented_at != null,
+                confirmed: d.confirmedAt != null,
               }));
             break;
 
